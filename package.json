@@ -1,0 +1,25 @@
+{
+  "name": "projeto-reserva-mesas",
+  "version": "1.0.0",
+  "description": "projeto ptas criação de reserva de salas em padrão mvc, com rotas e interface.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuilhiemePereira/projeto-reserva-mesas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuilhiemePereira/projeto-reserva-mesas/issues"
+  },
+  "homepage": "https://github.com/GuilhiemePereira/projeto-reserva-mesas#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
