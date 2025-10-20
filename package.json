@@ -4,7 +4,7 @@
   "description": "projeto ptas criação de reserva de salas em padrão mvc, com rotas e interface.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,8 @@
     "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
-    "prisma": "^6.17.1"
+    "jest": "^30.2.0",
+    "prisma": "^6.17.1",
+    "supertest": "^7.1.4"
   }
 }
