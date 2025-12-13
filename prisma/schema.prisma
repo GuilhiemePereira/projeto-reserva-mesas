@@ -3,16 +3,36 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite" // ou "postgresql" se preferir
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
 model Usuario {
-  id        Int      @id @default(autoincrement())
-  nome      String
-  email     String   @unique
-  password  String
-  IsAdmin  Boolean @default(false)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id       Int      @id @default(autoincrement())
+  nome     String
+  email    String   @unique
+  password String
+  isAdmin  Boolean  @default(false)
+
+  reservas Reserva[]
+}
+
+model Mesa {
+  id         Int      @id @default(autoincrement())
+  codigo     String
+  n_lugares  Int
+
+  reservas   Reserva[]
+}
+
+model Reserva {
+  id         Int      @id @default(autoincrement())
+  usuarioId  Int
+  mesaId     Int
+  data       DateTime
+  n_pessoas  Int
+  status     Boolean  @default(true)
+
+  usuario  Usuario @relation(fields: [usuarioId], references: [id])
+  mesa     Mesa    @relation(fields: [mesaId], references: [id])
 }
